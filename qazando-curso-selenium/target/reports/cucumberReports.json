@@ -1,0 +1,22 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: pt"
+      }
+    ],
+    "line": 4,
+    "name": "Cadastro de usuario",
+    "description": "",
+    "id": "cadastro-de-usuario",
+    "keyword": "Funcionalidade",
+    "uri": "cadastro_usuario.feature",
+    "tags": [
+      {
+        "line": 3,
+        "name": "@cadastro"
+      }
+    ]
+  }
+]
