@@ -25,4 +25,17 @@ public class Utils extends RunCucumberTest {
 
         return email_int + resultado + email_final;
     }
+
+    public String getRandomSenha(){
+        //String senha_int = "emailteste_";
+        //String senha_final = "@teste.com";
+
+        Random random = new Random();
+        String primeiraParte = random.toString();
+        int minimo = 0;
+        int maximo = 999999999;
+        int resultado = random.nextInt(maximo-minimo) + minimo;
+
+        return primeiraParte + resultado;
+    }
 }
