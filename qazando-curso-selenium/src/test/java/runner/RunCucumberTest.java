@@ -21,19 +21,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
         //Caminho de onde estão os aquivos dos metodos (STEPs)
         glue = {"steps"}
 )
-public class RunCucumberTest {
+public class RunCucumberTest extends RunBase{
 
     public static WebDriver driver;
 
-    @BeforeClass
+    /*@BeforeClass
     public static void start() {
         System.out.println("Iniciou!");
         driver = new ChromeDriver();
-    }
+    }*/
 
     @AfterClass
     public static void stop() {
         System.out.println("Finalizou!");
-        //driver.quit();
+        getDriver().quit();
     }
 }

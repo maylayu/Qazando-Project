@@ -9,12 +9,12 @@ import java.util.Random;
 
 public class Utils extends RunCucumberTest {
 
-    public void waitElementBePresent(By element, int tempo){
-        WebDriverWait wait = new WebDriverWait(driver, tempo);
+    public static void waitElementBePresent(By element, int tempo){
+        WebDriverWait wait = new WebDriverWait(getDriver(), tempo);
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public String getRandomEmail(){
+    public static String getRandomEmail(){
         String email_int = "emailteste_";
         String email_final = "@teste.com";
 

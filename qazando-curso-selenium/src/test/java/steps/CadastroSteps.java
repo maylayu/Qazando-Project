@@ -4,11 +4,14 @@ import cucumber.api.PendingException;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.it.Quando;
 import cucumber.api.java.pt.Então;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import pages.CadastroPage;
 import runner.RunCucumberTest;
 
 public class CadastroSteps extends RunCucumberTest {
-    CadastroPage cadastroPage = new CadastroPage(driver);
+    CadastroPage cadastroPage = new CadastroPage();
+    String nome="Mayla", sobrenome="Yuu";
 
     @Quando("^preencho o formulario de cadastro$")
     public void preencho_o_formulario_de_cadastro(){
@@ -22,17 +25,18 @@ public class CadastroSteps extends RunCucumberTest {
         cadastroPage.preencheEstado("Colorado");
         cadastroPage.preencheCEP("11090");
         cadastroPage.preencheTelefone("+5513991050505");
-        cadastroPage.clicarRegistrar();
     }
 
     @Quando("^clico em registrar$")
     public void clico_em_registrar(){
         // Write code here that turns the phrase above into concrete actions
+        cadastroPage.clicarRegistrar();
+
     }
 
-    @Então("^vejo a mensagem de cadastro realizado com sucesso$")
+    @Então("^vejo o cadastro realizado com sucesso$")
     public void vejo_a_mensagem_de_cadastro_realizado_com_sucesso(){
-        // Write code here that turns the phrase above into concrete actions
+        cadastroPage.validarCadastro(nome, sobrenome);
     }
 
 }
