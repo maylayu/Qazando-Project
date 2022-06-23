@@ -9,7 +9,6 @@ import static org.openqa.selenium.remote.BrowserType.FIREFOX;
 
 public class RunBase {
     static WebDriver driver;
-
     public enum Browser {CHROME, FIREFOX};
 
     public static WebDriver getDriver(){

@@ -1,11 +1,7 @@
 package steps;
 
-import cucumber.api.PendingException;
-import cucumber.api.java.es.Dado;
 import cucumber.api.java.it.Quando;
 import cucumber.api.java.pt.Então;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import pages.CadastroPage;
 import runner.RunCucumberTest;
 

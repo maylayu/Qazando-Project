@@ -23,9 +23,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 )
 public class RunCucumberTest extends RunBase{
 
-    public static WebDriver driver;
+    //public static WebDriver driver;
 
-    /*@BeforeClass
+    /* @BeforeClass
     public static void start() {
         System.out.println("Iniciou!");
         driver = new ChromeDriver();
